@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Contador Webber-Multivac 535</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='./styling.css'>
+    </head>
+    <body>
+        <div class="counterTitle">
+            <h1>Contador</h1>
+        </div>
+        <div class='superContainer'>
+            <div class='timerContainer'>
+                <div class="timerLabel">Tiempo de inicio:</div>
+                <div class="timer" id='startTime'>00:00:00</div>
+                <div class='timerBtns'>
+                    <button class='timerBtn' id='start' onclick="startTimer();">Iniciar</button>
+                    <button class='timerBtn' id='end' onclick="stopInterval();">Terminar</button>
+                </div>
+            </div>
+            <div class='counterContainer'>
+                <div class="counterLabel">Tiempo faltante:</div>
+                <div class="counter" id='countdown'>00:00</div>
+            </div>
+            <div class='counterContainer'>
+                <div class="counterLabel">Tiempo de ciclo:</div>
+                <div class="counter" id='cycleTime'>00.000</div>
+            </div>
+        </div>
+        <div class="superContainer">
+            <div class='counterContainer'>
+                <div class='counterLabel'>Unidades producidas:</div>
+                <div class='counter' id='unitCounter'>0</div>
+                <button class='counterModifier' id='unitAdder' onclick="changeUnits(1);">+</button>
+                <button class='counterModifier' id='unitSubstracter' onclick="changeUnits(-1);">-</button>
+            </div>
+            <div class='counterContainer'>
+                <div class='counterLabel'>Unidades retornadas:</div>
+                <div class='counter' id='returnedCounter'>0</div>
+                <button class='counterModifier' id='returnedAdder' onclick="changeReturned(1);">+</button>
+                <button class='counterModifier' id='returnedSubstracter' onclick="changeReturned(-1);">-</button>
+            </div>
+            <div class='counterContainer'>
+                <div class='counterLabel'>Unidades vacías:</div>
+                <div class='counter' id='emptyCounter'>0</div>
+                <button class='counterModifier' id='emptyAdder' onclick="changeEmpty(1);">+</button>
+                <button class='counterModifier' id='emptySubstracter' onclick="changeEmpty(-1);">-</button>
+            </div>
+        </div>
+        <div class="superContainer">
+            <div class='timerContainer'>
+                <div class='timerLabel'>Tiempo de ciclo promedio:</div>
+                <div class="counter" id='promCycle'>00.00</div>
+                <div class='cyclesList' id='cyclesList'></div>
+            </div>
+        </div> 
+    </body>
+    <script src='./app.js'></script>
+</html>
